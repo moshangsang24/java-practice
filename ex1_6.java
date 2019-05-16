@@ -26,15 +26,19 @@ public class ex1_6
             int i=0;
             int tmp[];
             tmp=new int[10];
-            for(i=10;i>=n;i--)
+            for(i=9;i>=0;i--)
             {
-            	tmp[i]=a[i];
+            	if(i>=10-n) tmp[i]=a[i];
+            	else
+            	{
+	        		a[i+n]=a[i];
+	        		if(i<n){
+	        			
+	        		}
+            	} 
             }
-            for(;i>=0;i--){
-            	a[i+n]=a[i];
-            }
-            for(i=0;i<n;i++){
-            	a[i]=tmp[i+n];
+            for (i=0; i<n; i++) {
+            	a[i]=tmp[i+10-n];
             }
         }   
 
