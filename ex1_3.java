@@ -38,6 +38,7 @@ public class ex1_3
         		if (ok){
 	        		a[cur]=i;
 	        		print_p(cur+1);
+	        		// a[cur]=0;
         		}
 
         	}
