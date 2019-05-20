@@ -1,4 +1,3 @@
-package ex1;
 /*
 content: java experiment
 user: Liu
