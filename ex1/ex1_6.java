@@ -1,9 +1,11 @@
+package ex1;
 /*
 content: java experiment
 user: Liu
 data:
 version: 0.0.1
 */    
+
 import java.util.Scanner;
 public class ex1_6  
     {  
