@@ -5,23 +5,24 @@ data:
 version: 0.0.1
 */    
 import java.util.Scanner;
-
-
 public class ex1_7  
     {  
-    	static int a[]={0,0,0,0,0,0,0,0,0,0};
-    	//a=new int[10]={0,0,0,0,0,0,0,0,0,0};
+    	static int[] a;
         public static void main(String[] args)  
         {  
             readArray();
+            System.out.println("The original array is:");
             showArray();
             change();
+            System.out.println("The changed array is:");
             showArray();
         }   
 
         static void readArray()
         {   
+            a=new int[10];
             Scanner scan=new Scanner(System.in);
+            System.out.println("Input 10 numbers:");
             int i;
             for(i=0;i<10;i++){
                 a[i]=scan.nextInt();
@@ -30,12 +31,12 @@ public class ex1_7
         }
         static void showArray()  
         {  
-        	int i=0;
-        	for(i=0;i<10;i++){
-        		System.out.print(a[i]);
-        	}
-        		System.out.println();
-        }  
+            for(int elem:a){
+                System.out.print(elem+" ");
+            }
+            System.out.println();
+        } 
+
         static void change()
         {
         	int i,j,mx=a[0],mn=a[0];
@@ -50,6 +51,5 @@ public class ex1_7
             System.out.println("The min of the Array is:"+mn);
             a[ix]=mn;
             a[in]=mx;
-
         }
     }  

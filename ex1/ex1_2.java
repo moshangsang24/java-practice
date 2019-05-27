@@ -1,5 +1,5 @@
-
-public class ex1_2 {
+public class ex1_2 
+{
 	public static void main(String[] args)
 	{
 		int i;
@@ -19,5 +19,4 @@ public class ex1_2 {
 		}
 		return tem;
 	}
-
 }

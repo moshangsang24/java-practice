@@ -23,7 +23,8 @@ public class ex1_8
 class code
 {
 	int a[] ={0,0,0,0};
-	 code(){
+
+	code(){
 	 	Scanner scan=new Scanner(System.in);
         System.out.println("Please input the code:");
         int i;
@@ -33,13 +34,13 @@ class code
 
     }
 
-    void showCode(){
-    	int i=0;
-    	for(i=0;i<4;i++){
-    		System.out.print(a[i]);
-    	}
-		System.out.println();
-    }
+    void showCode()
+    {  
+        for(int elem:a){
+            System.out.print(elem+" ");
+        }
+        System.out.println();
+    } 
 
     void cipher(){
     	int i;
