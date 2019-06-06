@@ -12,22 +12,34 @@ public class ex2_11
     {  
     	Scanner scan=new Scanner(System.in);
     	String s=scan.next();
-    	int max=0,index=0;
+    	int index=0;
+    	int res=0,mid;
     	for(int i=0;i<s.length();i++)
     	{
-    		for(int j=1;j<s.length()/2 && i+j< s.length() && i-j>=0 ;j++){
-    			if(s.charAt(i-j)!=s.charAt(i+j) && j>max){
-    				max=j-1;
-    				index=i;
+    		mid=1;
+    		for(int j=1;j<=s.length();j++){
+    			if(i-j<0 || i+j>=s.length() || s.charAt(i-j)!=s.charAt(i+j))
+    			{
+    				break;
     			}
+    				mid+=2;
+    		}
+    		if(mid>res){
+    			res=mid;
+    			index=i-res/2;
+    		}
+	    	mid=0;
+	    	for(int j=1;j<=s.length();j++)
+	    	{
+	    		if(i+1-j<0 || i+j>=s.length()|| s.charAt(i-j+1)!=s.charAt(i+j))
+	    			break;
+	    		mid+=2;
+	    	}
+    		if(mid>res){
+    			res=mid;
+    			index=i-res/2+1;
     		}
     	}
-
-    	for(int i=max;i>=0;i--){
-    		System.out.print(s.charAt(index-i));
-    	}
-    	for(int i=1;i<max;i++){
-    		System.out.print(s.charAt(index-i));
-    	}
+    	System.out.println(s.substring(index,index+res));
     }   
 }  

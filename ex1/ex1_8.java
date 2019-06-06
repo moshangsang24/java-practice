@@ -31,7 +31,7 @@ class code
         for(i=0;i<4;i++){
             a[i]=scan.nextInt();
         }
-
+        scan.close();
     }
 
     void showCode()
