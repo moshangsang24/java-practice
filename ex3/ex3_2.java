@@ -1,13 +1,6 @@
-/*
-content: java experiment
-user: Liu
-data:
-version: 0.0.1
-*/    
-
 /* CLASS
 *@name: ex2_3
-*@description:
+*@description: 主类用于测试
 */    
 public class ex3_2  
 {  

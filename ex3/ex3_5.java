@@ -17,6 +17,7 @@ public class ex3_5  extends Thread
 	public void run()
 	{
 		for (int i=0; i<20; i++) {
+			//防止出现错误，提高了多线程程序的安全性
 			try
 			{
 				System.out.println(this.name);
